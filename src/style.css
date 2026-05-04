@@ -66,3 +66,82 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+/*Header*/
+
+:root{
+  font-family: 'poppins', Arial, Helvetica, sans-serif;
+}
+
+.diagonal-box {
+  max-height: 40vh;
+  background-image: linear-gradient(45deg, #6303b1, #ff0099);
+  transform: skewY(-13deg);
+  transform-origin: top left;
+  padding: calc(100vw * tan(13deg)) 0;
+box-shadow: 1px 4px 9px -1px rgba(0,0,0,0.41);
+}
+.content {
+  max-width: 50em;
+  margin: 0 auto;
+  transform: skewY(13deg);
+}
+
+/*container*/
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1em;
+  gap: 2rem;
+}
+/*Image thing*/
+
+.img-container{
+  position: relative;
+  color:white;
+  width: fit-content;
+}
+.name{
+  position: absolute;
+  top: 80%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  font-family: 'roboto', Arial, Helvetica, sans-serif;
+}
+.professional-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/*header info*/
+.header-information{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.header-information h2{
+  font-family: 'roboto', Arial, Helvetica, sans-serif;
+  font-size: 2.5em;
+}
+
+.header-information p{
+  font-size: 1.2em;
+}
+
+/*icons*/
+
+.header-social-icons{
+  margin-top: 1em;
+  display: flex;
+  gap: 20px;
+}
+.header-social-icons svg{
+  width: 1.5em;
+  height: 1.5em;
+}
