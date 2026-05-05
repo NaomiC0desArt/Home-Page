@@ -73,15 +73,31 @@ h6 {
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  position: relative;
+}
 .diagonal-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   max-height: 30vh;
   background-image: linear-gradient(45deg, #6303b1, #ff0099);
   transform: skewY(-13deg);
   transform-origin: top left;
   padding: calc(100vw * tan(13deg)) 0;
   box-shadow: 1px 4px 9px -1px rgba(0, 0, 0, 0.41);
+  z-index: 0;
 }
 .content {
+  position: relative;
+  z-index: 1;
   max-width: 40em;
   margin: 0 auto;
   transform: skewY(13deg);
@@ -197,7 +213,7 @@ h6 {
 
 @media (min-width: 1000px) {
   .content {
-    max-width: 60em;
+    max-width: 60vw;
   }
 
   .card-container {
@@ -220,8 +236,41 @@ h6 {
     padding: 1rem;
   }
 
-   .img-container {
+  .img-container {
     margin-top: -3rem;
     width: clamp(300px, 25vw, 400px);
   }
+}
+
+/*projects*/
+.project-icons svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.project-infoDiv {
+  background-color: white;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.project-card{
+  width: clamp(400px, 25vw, 500px);
+}
+.project-topDiv {
+  display: flex;
+}
+.project-icons {
+  display: flex;
+}
+
+.projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
