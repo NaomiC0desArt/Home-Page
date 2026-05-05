@@ -85,7 +85,7 @@ body {
   right: 0;
   min-height: 30vh;
   max-height: 40vh;
-  background-image: linear-gradient(45deg, #6303b1, #ff0099);
+  background-image: linear-gradient(45deg, #ffd9e6, #ff0099);
   transform: skewY(-13deg);
   transform-origin: top left;
   padding: calc(100vw * tan(13deg)) 0;
@@ -140,7 +140,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  margin: 0 2.5rem;
 }
 
 .header-information h2 {
@@ -165,99 +164,6 @@ body {
   height: 1.5em;
 }
 
-/*header for tablet*/
-
-@media (min-width: 700px) {
-  .card-container {
-    display: block;
-    position: relative;
-    padding-top: 3rem;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 1px 4px 13px -4px rgba(0, 0, 0, 0.31);
-    border-radius: 3%;
-  }
-
-  .header{
-    margin-top: 5rem;
-  }
-  .img-container {
-    float: left;
-    margin-right: 1rem;
-    margin-left: -2rem;
-    margin-top: -8rem;
-    width: clamp(300px, 25vw, 400px);
-  }
-
-  .professional-img {
-    height: clamp(350px, 30vh, 450px);
-    object-fit: cover;
-    object-position: top;
-  }
-
-  .header-information {
-    display: block;
-    text-align: left;
-    padding: 3rem 2.5rem 2rem 2.5rem;
-    margin: 0;
-  }
-
-  .header-information h2 {
-    text-align: center;
-  }
-  .name {
-    position: absolute;
-    top: 10%;
-    left: 148%;
-    white-space: nowrap;
-    font-size: clamp(4rem, 5vw, 6rem);
-  }
-
-  .header-social-icons {
-    justify-content: flex-end;
-  }
-}
-
-@media (min-width: 1100px) {
-  .content,
-  .projects {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .card-container {
-    display: block;
-    position: relative;
-    padding-top: 1rem;
-    height: auto;
-    width: 100%;
-  }
-
-  .name {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    white-space: nowrap;
-    font-size: clamp(2rem, 3vw, 3.5rem);
-  }
-
-  .header-information {
-    padding: 1rem;
-  }
-
-  .img-container {
-    margin-top: -3rem;
-    width: clamp(300px, 25vw, 400px);
-  }
-
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    width: 100%;
-    justify-items: center;
-  }
-}
-
 /*projects*/
 
 .projects {
@@ -269,8 +175,10 @@ body {
   margin: 2rem auto;
 }
 
-.projects-heading{
-  font-size: 2rem;
+.projects-heading {
+  font-size: 2.5rem;
+  align-self: flex-start;
+  margin: 0 4rem;
 }
 .projects-container {
   display: grid;
@@ -323,4 +231,181 @@ body {
   width: 1.5rem;
   height: 1.5rem;
   font-size: 1.5rem;
+}
+
+/*footer*/
+
+.footer {
+  padding-top: 2rem;
+  background-color: #ffd9e6;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-info div > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.contact-info div {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-info {
+  max-width: 400px;
+}
+
+.footer-info h3 {
+  font-size: 2rem;
+}
+
+.contact-info {
+  margin-top: 1rem;
+}
+
+.main-info {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.contact-icons svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 1.6rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+/*header for tablet*/
+
+@media (min-width: 700px) {
+  .card-container {
+    display: block;
+    position: relative;
+    padding-top: 3rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 4px 13px -4px rgba(0, 0, 0, 0.31);
+    border-radius: 3%;
+  }
+
+  .header {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+  .img-container {
+    float: left;
+    margin-right: 1rem;
+    margin-left: -2rem;
+    margin-top: -8rem;
+    width: clamp(300px, 25vw, 400px);
+  }
+
+  .professional-img {
+    height: clamp(350px, 30vh, 450px);
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .header-information {
+    display: block;
+    padding: 2rem;
+  }
+
+  .header-information p {
+    text-align: left;
+  }
+  .name {
+    position: absolute;
+    top: 10%;
+    left: 148%;
+    white-space: nowrap;
+    font-size: clamp(4rem, 5vw, 6rem);
+  }
+
+  .header-social-icons {
+    margin-top: 2rem;
+    justify-content: flex-end;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    padding: 3.6rem;
+  }
+
+  .contact-icons {
+    justify-content: start;
+  }
+
+  .main-info {
+    font-size: 1rem;
+  }
+
+  .footer img {
+    width: clamp(280px, 25vw, 400px);
+    object-fit: cover;
+    height: clamp(300px, 20vw, 400px);
+  }
+
+  .footer {
+    padding-top: 0rem;
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .content,
+  .projects {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .card-container {
+    display: block;
+    position: relative;
+    padding-top: 1rem;
+    height: auto;
+    width: 100%;
+  }
+
+  .name {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    white-space: nowrap;
+    font-size: clamp(2rem, 3vw, 3.5rem);
+  }
+
+  .header-information {
+    padding: 2rem;
+  }
+
+  .img-container {
+    margin-top: -3rem;
+    width: clamp(300px, 25vw, 400px);
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .projects-heading {
+    margin: 0;
+  }
 }
