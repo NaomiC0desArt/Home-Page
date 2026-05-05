@@ -46,7 +46,7 @@ const projects = [
   },
   {
     id: 6,
-    name: "Reusable JS Component Library",
+    name: "Reusable JS ",
     description:
       "Librería de componentes reutilizables en JavaScript puro, incluyendo modales, tarjetas dinámicas y sistema de íconos SVG.",
     color: "#00BCD4",

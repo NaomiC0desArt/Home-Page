@@ -73,21 +73,18 @@ h6 {
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 
-
-body{
+body {
   display: flex;
   flex-direction: column;
 }
 
-header{
-  position: relative;
-}
 .diagonal-box {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  max-height: 30vh;
+  min-height: 30vh;
+  max-height: 40vh;
   background-image: linear-gradient(45deg, #6303b1, #ff0099);
   transform: skewY(-13deg);
   transform-origin: top left;
@@ -95,12 +92,15 @@ header{
   box-shadow: 1px 4px 9px -1px rgba(0, 0, 0, 0.41);
   z-index: 0;
 }
+
 .content {
   position: relative;
   z-index: 1;
   max-width: 40em;
   margin: 0 auto;
-  transform: skewY(13deg);
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  width: 100%;
 }
 
 /*container*/
@@ -140,6 +140,7 @@ header{
   flex-direction: column;
   align-items: center;
   gap: 1em;
+  margin: 0 2.5rem;
 }
 
 .header-information h2 {
@@ -149,6 +150,7 @@ header{
 
 .header-information p {
   font-size: 0.9em;
+  text-align: center;
 }
 
 /*icons*/
@@ -175,6 +177,9 @@ header{
     border-radius: 3%;
   }
 
+  .header{
+    margin-top: 5rem;
+  }
   .img-container {
     float: left;
     margin-right: 1rem;
@@ -193,6 +198,7 @@ header{
     display: block;
     text-align: left;
     padding: 3rem 2.5rem 2rem 2.5rem;
+    margin: 0;
   }
 
   .header-information h2 {
@@ -211,9 +217,11 @@ header{
   }
 }
 
-@media (min-width: 1000px) {
-  .content {
-    max-width: 60vw;
+@media (min-width: 1100px) {
+  .content,
+  .projects {
+    max-width: 1100px;
+    margin: 0 auto;
   }
 
   .card-container {
@@ -221,7 +229,7 @@ header{
     position: relative;
     padding-top: 1rem;
     height: auto;
-    width: clamp(800px, 70vw, 1100px);
+    width: 100%;
   }
 
   .name {
@@ -240,37 +248,79 @@ header{
     margin-top: -3rem;
     width: clamp(300px, 25vw, 400px);
   }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    justify-items: center;
+  }
 }
 
 /*projects*/
-.project-icons svg {
-  width: 1.5em;
-  height: 1.5em;
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.projects-heading{
+  font-size: 2rem;
+}
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 1.5rem 4rem;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card > p {
+  height: 200px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  text-align: center;
+  padding: 3rem;
 }
 
 .project-infoDiv {
   background-color: white;
-}
-
-.projects-container {
+  padding: 1.5rem;
+  flex-grow: 1;
   display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.project-card{
-  width: clamp(400px, 25vw, 500px);
-}
 .project-topDiv {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 .project-icons {
   display: flex;
+  gap: 0.5rem;
 }
 
-.projects{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.project-icons svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
 }
